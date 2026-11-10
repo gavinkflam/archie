@@ -2,7 +2,7 @@
 :root {
   /* Light theme colors */
   --color-primary: #cc7a0a;
-  --color-primary-hover: #1c8ca8;
+  --color-primary-link: #1c8ca8;
   --color-border: #a59fa0;
   --color-callout: #1e90ff;
   --color-text: #29242a;
@@ -16,7 +16,7 @@
   
   /* Dark theme colors */
   --color-primary-dark: #ffd866;
-  --color-primary-hover-dark: #78dce8;
+  --color-primary-link-dark: #78dce8;
   --color-border-dark: #727072;
   --color-text-dark: #fcfcfa;
   --color-text-muted-dark: #dddddd;
@@ -132,9 +132,9 @@ blockquote {
 /* Links */
 a {
   /* Fallback for older browsers */
-  border-bottom: 3px solid var(--color-primary, #cc7a0a);
+  border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
   /* Modern logical properties */
-  border-block-end: 3px solid var(--color-primary, #cc7a0a);
+  border-block-end: 1px solid var(--color-primary-link, #1c8ca8);
   color: inherit;
   text-decoration: none;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -142,14 +142,7 @@ a {
 
 a:hover,
 a:focus {
-  background-color: var(--color-primary-hover, #1c8ca8);
-  color: #ffffff;
-  outline: 2px solid var(--color-primary, #cc7a0a);
-  outline-offset: 2px;
-}
-
-a:focus {
-  outline-style: solid;
+  color: var(--color-primary-link, #1c8ca8);
 }
 
 /* Lists */
@@ -417,9 +410,7 @@ footer {
 
 .soc:hover,
 .soc:focus {
-  color: #ffffff;
-  outline: 2px solid var(--color-primary, #cc7a0a);
-  outline-offset: 2px;
+  color: var(--color-primary-link, #1c8ca8);
 }
 
 .border {
@@ -469,9 +460,9 @@ article .title {
 
 .callout a {
   /* Fallback for older browsers */
-  border-bottom: 3px solid #ffffff;
+  border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
   /* Modern logical properties */
-  border-block-end: 3px solid #ffffff;
+  border-block-end: 1px solid var(--color-primary-link, #1c8ca8);
   color: inherit;
 }
 
@@ -530,9 +521,9 @@ article .title {
 
 .tags a {
   /* Fallback for older browsers */
-  border-bottom: 3px solid var(--color-primary, #1c8ca8);
+  border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
   /* Modern logical properties */
-  border-block-end: 3px solid var(--color-primary, #1c8ca8);
+  border-block-end: 1px solid var(--color-primary-link, #1c8ca8);
   padding: 0.25rem 0.5rem;
   border-radius: 3px;
   transition: all 0.2s ease;
@@ -540,8 +531,7 @@ article .title {
 
 .tags a:hover,
 .tags a:focus {
-  color: #ffffff;
-  background-color: var(--color-primary-hover, #1c8ca8);
+  color: var(--color-primary-link, #1c8ca8);
 }
 
 /* Icons and media */
@@ -750,10 +740,7 @@ nav {
 
 .nav-toggle:hover,
 .nav-toggle:focus {
-  background-color: var(--color-primary, #cc7a0a);
-  color: #ffffff;
-  outline: 2px solid var(--color-primary, #cc7a0a);
-  outline-offset: 2px;
+  color: var(--color-primary-link, #1c8ca8);
 }
 
 .nav-toggle:focus {
@@ -889,6 +876,28 @@ kbd {
 
 .nav-toggle:active {
   transform: scale(0.95);
+}
+
+/* Links with no underline until hover */
+.main > a:not(.soc),
+nav > a:not(.soc),
+footer a:not(.soc) {
+  /* Fallback for older browsers */
+  border-bottom: 1px solid transparent;
+  /* Modern logical properties */
+  border-block-end: 1px solid transparent;
+}
+
+.main > a:hover:not(.soc),
+.main > a:focus:not(.soc),
+nav > a:hover:not(.soc),
+nav > a:focus:not(.soc),
+footer a:hover:not(.soc),
+footer a:focus:not(.soc) {
+  /* Fallback for older browsers */
+  border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
+  /* Modern logical properties */
+  border-block-end: 1px solid var(--color-primary-link, #1c8ca8);
 }
 
 /* Media queries for responsive design */

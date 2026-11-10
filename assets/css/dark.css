@@ -60,15 +60,21 @@ h6::before { color: var(--color-primary-dark, #ffd866); }
 
 /* Links */
 a {
-  border-block-end: 3px solid var(--color-primary-dark, #ffd866);
+  /* Fallback for older browsers */
+  border-bottom: 1px solid var(--color-primary-link-dark, #78dce8);
+  /* Modern logical properties */
+  border-block-end: 1px solid var(--color-primary-link-dark, #78dce8);
   color: inherit;
 }
 
 a:hover,
 a:focus {
-  background-color: var(--color-primary-dark, #ffd866);
-  color: #000000;
-  outline-color: var(--color-primary-dark, #ffd866);
+  color: var(--color-primary-link-dark, #78dce8);
+}
+
+.soc:hover,
+.soc:focus {
+  color: var(--color-primary-link-dark, #78dce8);
 }
 
 .site-description a {
@@ -77,23 +83,20 @@ a:focus {
 
 .site-description a:hover,
 .site-description a:focus {
-  color: #000000;
-}
-
-/* Lists */
-ul > li::before {
-  color: var(--color-primary-dark, #ffd866);
+  color: var(--color-primary-link-dark, #78dce8);
 }
 
 /* Tags */
 .tags a {
-  border-block-end: 3px solid var(--color-primary-dark, #ffd866);
+  /* Fallback for older browsers */
+  border-bottom: 1px solid var(--color-primary-link-dark, #78dce8);
+  /* Modern logical properties */
+  border-block-end: 1px solid var(--color-primary-link-dark, #78dce8);
 }
 
 .tags a:hover,
 .tags a:focus {
-  background-color: var(--color-primary-dark, #ffd866);
-  color: #000000;
+  color: var(--color-primary-link-dark, #78dce8);
 }
 
 .site-title a {
@@ -112,8 +115,7 @@ footer {
 
 .soc:hover,
 .soc:focus {
-  color: #000000;
-  outline-color: var(--color-primary-dark, #ffd866);
+  color: var(--color-primary-link-dark, #78dce8);
 }
 
 .draft-label {
@@ -144,9 +146,7 @@ table tr:nth-child(even) {
 
 .nav-toggle:hover,
 .nav-toggle:focus {
-  background-color: var(--color-primary-dark, #ffd866);
-  color: #000000;
-  outline-color: var(--color-primary-dark, #ffd866);
+  color: var(--color-primary-link-dark, #78dce8);
 }
 /* Language badges inherit from main.css - no duplicates needed */
 
@@ -202,4 +202,26 @@ kbd {
 
 .search-tag {
   border-color: var(--color-primary-dark, #ffd866);
+}
+
+/* Links with no underline until hover */
+.main > a:not(.soc),
+nav > a:not(.soc),
+footer a:not(.soc) {
+  /* Fallback for older browsers */
+  border-bottom: 1px solid transparent;
+  /* Modern logical properties */
+  border-block-end: 1px solid transparent;
+}
+
+.main > a:hover:not(.soc),
+.main > a:focus:not(.soc),
+nav > a:hover:not(.soc),
+nav > a:focus:not(.soc),
+footer a:hover:not(.soc),
+footer a:focus:not(.soc) {
+  /* Fallback for older browsers */
+  border-bottom: 1px solid var(--color-primary-link-dark, #78dce8);
+  /* Modern logical properties */
+  border-block-end: 1px solid var(--color-primary-link-dark, #78dce8);
 }
