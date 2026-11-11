@@ -26,26 +26,6 @@
 	{{ $mainStyle := resources.Get "css/main.css" | minify | fingerprint }}
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ $mainStyle.Permalink }}" />
 
-	{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") (eq .Site.Params.mode "toggle") -}}
-	{{ $darkStyle := resources.Get "css/dark.css" | minify | fingerprint }}
-	<link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ $darkStyle.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} />
-	{{- end -}}
-
-	<!-- Dark mode toggle support -->
-	{{ if eq .Site.Params.mode "toggle" -}}
-	<script type="text/javascript">
-	function setTheme(mode) {
-		document.getElementById("darkModeStyle").disabled = (mode === "light");
-		localStorage.setItem("theme", mode);
-	}
-	function toggleTheme() {
-		setTheme(localStorage.getItem("theme") === "dark" ? "light" : "dark");
-	}
-
-	setTheme(localStorage.getItem("theme") || "light");
-	</script>
-	{{- end -}}
-
 	<!-- Mathjax support -->
 	{{- if .Site.Params.mathjax | default false -}}
 		<script type="text/javascript"
