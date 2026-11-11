@@ -461,32 +461,6 @@ article .title {
   color: var(--color-primary-link, #1c8ca8);
 }
 
-/* Icons and media */
-svg {
-  /* Fallback for older browsers */
-  max-height: 1rem;
-  max-width: 1rem;
-  /* Modern logical properties */
-  max-block-size: 1rem;
-  max-inline-size: 1rem;
-}
-
-.feather {
-  /* Fallback for older browsers */
-  width: 1.5rem;
-  height: 1.5rem;
-  /* Modern logical properties */
-  inline-size: 1.5rem;
-  block-size: 1.5rem;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 /* Draft label */
 .draft-label {
   color: var(--color-border, #a59fa0);
@@ -638,44 +612,6 @@ nav {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.nav-toggle {
-  /* Reset button styles */
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: none;
-  background: none;
-  margin: 0;
-  font: inherit;
-  cursor: pointer;
-  
-  /* Custom styling */
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: all 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-toggle {
-  /* Ensure icon is always visible */
-  color: var(--color-text, #29242a);
-}
-
-.nav-toggle:hover,
-.nav-toggle:focus {
-  color: var(--color-primary-link, #1c8ca8);
-}
-
-.nav-toggle:focus {
-  outline-style: solid;
-}
-
-.nav-toggle:active {
-  transform: scale(0.95);
 }
 
 /* Links with no underline until hover */
@@ -853,17 +789,6 @@ footer a:focus {
   table tr:nth-child(even) {
     background-color: var(--color-background-code-dark, #3a3a3a);
   }
-
-  /* Navigation toggle in dark mode */
-  .nav-toggle {
-    color: var(--color-text-dark, #fcfcfa);
-  }
-
-  .nav-toggle:hover,
-  .nav-toggle:focus {
-    color: var(--color-primary-link-dark, #78dce8);
-  }
-  /* Language badges inherit from main.css - no duplicates needed */
 
   /* Links with no underline until hover */
   .main > a,
