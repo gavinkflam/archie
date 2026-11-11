@@ -7,7 +7,7 @@ licenselink = "https://github.com/gavinkflam/lightsail/blob/master/LICENSE"
 description = "Lightsail is a minimalistic and optimized Hugo theme."
 homepage = "https://github.com/gavinkflam/lightsail"
 tags = ["blog","simple","responsive","minimal","tags","personal","clean","shortcodes"]
-features = ["blog", "Clean and minimal", "Responsive", "Syntax highlighting"]
+features = ["blog", "Clean and minimal", "Responsive"]
 min_version = "0.41"
 
 [author]
