@@ -397,21 +397,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.soc {
-  display: flex;
-  align-items: center;
-  /* Fallback for older browsers */
-  border-bottom: none;
-  /* Modern logical properties */
-  border-block-end: none;
-  transition: color 0.2s ease;
-}
-
-.soc:hover,
-.soc:focus {
-  color: var(--color-primary-link, #1c8ca8);
-}
-
 .border {
   margin-inline: 0.5rem;
   border: 1px solid var(--color-border, #a59fa0);
@@ -877,21 +862,21 @@ kbd {
 }
 
 /* Links with no underline until hover */
-.main > a:not(.soc),
-nav > a:not(.soc),
-footer a:not(.soc) {
+.main > a,
+nav > a,
+footer a {
   /* Fallback for older browsers */
   border-bottom: 1px solid transparent;
   /* Modern logical properties */
   border-block-end: 1px solid transparent;
 }
 
-.main > a:hover:not(.soc),
-.main > a:focus:not(.soc),
-nav > a:hover:not(.soc),
-nav > a:focus:not(.soc),
-footer a:hover:not(.soc),
-footer a:focus:not(.soc) {
+.main > a:hover,
+.main > a:focus,
+nav > a:hover,
+nav > a:focus,
+footer a:hover,
+footer a:focus {
   /* Fallback for older browsers */
   border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
   /* Modern logical properties */
@@ -995,11 +980,6 @@ footer a:focus:not(.soc) {
     color: var(--color-primary-link-dark, #78dce8);
   }
 
-  .soc:hover,
-  .soc:focus {
-    color: var(--color-primary-link-dark, #78dce8);
-  }
-
   .site-description a {
     color: var(--color-text-muted-dark, #dddddd);
   }
@@ -1034,11 +1014,6 @@ footer a:focus:not(.soc) {
 
   .highlight {
     background-color: var(--color-background-pre-dark, #272822);
-  }
-
-  .soc:hover,
-  .soc:focus {
-    color: var(--color-primary-link-dark, #78dce8);
   }
 
   .draft-label {
@@ -1128,21 +1103,21 @@ footer a:focus:not(.soc) {
   }
 
   /* Links with no underline until hover */
-  .main > a:not(.soc),
-  nav > a:not(.soc),
-  footer a:not(.soc) {
+  .main > a,
+  nav > a,
+  footer a {
     /* Fallback for older browsers */
     border-bottom: 1px solid transparent;
     /* Modern logical properties */
     border-block-end: 1px solid transparent;
   }
 
-  .main > a:hover:not(.soc),
-  .main > a:focus:not(.soc),
-  nav > a:hover:not(.soc),
-  nav > a:focus:not(.soc),
-  footer a:hover:not(.soc),
-  footer a:focus:not(.soc) {
+  .main > a:hover,
+  .main > a:focus,
+  nav > a:hover,
+  nav > a:focus,
+  footer a:hover,
+  footer a:focus {
     /* Fallback for older browsers */
     border-bottom: 1px solid var(--color-primary-link-dark, #78dce8);
     /* Modern logical properties */
