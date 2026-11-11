@@ -4,7 +4,6 @@
   --color-primary: #cc7a0a;
   --color-primary-link: #1c8ca8;
   --color-border: #a59fa0;
-  --color-callout: #1e90ff;
   --color-text: #29242a;
   --color-text-muted: #737373;
   --color-text-meta: #999999;
@@ -423,61 +422,6 @@ article .title {
   margin-block-end: 1em;
 }
 
-
-/* Callouts */
-.callout {
-  background-color: var(--color-callout, #1e90ff);
-  color: #ffffff;
-  padding: 1em;
-  border-radius: var(--border-radius, 5px);
-  /* Fallback for older browsers */
-  margin-top: 1em;
-  margin-bottom: 1em;
-  /* Modern logical properties */
-  margin-block: 1em;
-}
-
-.callout p {
-  margin: 0;
-}
-
-.callout a {
-  /* Fallback for older browsers */
-  border-bottom: 1px solid var(--color-primary-link, #1c8ca8);
-  /* Modern logical properties */
-  border-block-end: 1px solid var(--color-primary-link, #1c8ca8);
-  color: inherit;
-}
-
-.callout a:hover,
-.callout a:focus {
-  background-color: #ffffff;
-  color: var(--color-callout, #1e90ff);
-}
-
-/* Callout variants */
-.callout-alert {
-  color: #721c24;
-  background-color: #f8d7da;
-  border: 3px solid #f5c2c7;
-}
-
-.callout-tip {
-  color: #055160;
-  background-color: #d1ecf1;
-  border: 3px solid #b8daff;
-}
-
-.callout-warning {
-  color: #664d03;
-  background-color: #fff3cd;
-  border: 3px solid #ffecb5;
-}
-
-.callout-custom {
-  /* Custom styles will be applied inline */
-  color: inherit;
-}
 
 /* Site and content elements */
 .site-description {
@@ -1047,34 +991,6 @@ footer a:focus {
     color: var(--color-primary-link-dark, #78dce8);
   }
   /* Language badges inherit from main.css - no duplicates needed */
-
-  /* Callouts in dark mode */
-  .callout {
-    background-color: var(--color-background-pre-dark, #272822);
-    color: var(--color-text-dark, #fcfcfa);
-  }
-
-  .callout-alert {
-    color: #f8d7da;
-    background-color: #2d1b1d;
-    border-color: #842029;
-  }
-
-  .callout-tip {
-    color: #d1ecf1;
-    background-color: #0c2428;
-    border-color: #0f5132;
-  }
-
-  .callout-warning {
-    color: #fff3cd;
-    background-color: #332701;
-    border-color: #997404;
-  }
-
-  .callout-custom {
-    color: var(--color-text-dark, #fcfcfa);
-  }
 
   /* Search in dark mode */
   .search-panel,
