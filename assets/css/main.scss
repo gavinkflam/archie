@@ -77,16 +77,11 @@ body {
 p {
   line-height: $line-height-content;
   /* Fallback for older browsers */
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-@supports (margin-block: 0.5em) {
-  p {
-    margin-top: unset;
-    margin-bottom: unset;
-    margin-block: 0.5em;
-  }
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  /* Modern logical properties */
+  margin-block-start: 1em;
+  margin-block-end: 0.3em;
 }
 
 hr {
@@ -148,6 +143,12 @@ ul {
   padding-left: 2ch;
   /* Modern logical properties */
   padding-inline-start: 2ch;
+  /* Fallback for older browsers */
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+  /* Modern logical properties */
+  margin-block-start: 1em;
+  margin-block-end: 0.3em;
 }
 
 ul li {
@@ -157,7 +158,6 @@ ul li {
 ul > li::before {
   content: '* ';
   font-weight: bold;
-  color: $color-primary;
 }
 
 /* Images */
@@ -275,15 +275,26 @@ header .main {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem;
+h1 {
+  font-size: 1rem;
+  line-height: 1.2;
   /* Fallback for older browsers */
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom: 0.5em;
   /* Modern logical properties */
-  margin-block-start: 2em;
+  margin-block-start: 1em;
   margin-block-end: 0.5em;
-  line-height: 1.2;
+}
+
+h2, h3, h4, h5, h6 {
+  font-size: 1rem;
+  line-height: 1;
+  /* Fallback for older browsers */
+  margin-top: 0.8em;
+  margin-bottom: 0.2em;
+  /* Modern logical properties */
+  margin-block-start: 0.8em;
+  margin-block-end: 0.2em;
 }
 
 h1::before { color: $color-primary; content: '# '; }
